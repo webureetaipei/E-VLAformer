@@ -22,8 +22,9 @@ This phase ensures the reproducibility of the Sim-to-Real environment on heterog
 - [x] **Task 04: Development Environment Verification**
   - Configured VS Code Remote - WSL integration.
   - Validated GPU tensor operations (See `check_gpu.py`).
-- [x] **Task 05: Project Structure Initialization** (In Progress)
-
+- [x] **Task 05: Project Structure Initialization** 
+- [x] **Task 06: Verified C++/CUDA Toolchain**
+  - Verified C++/CUDA Toolchain (GCC, CMake, NVCC) for future Inference Engine development.
 ### Phase 2: Core Implementation (Upcoming)
 - [ ] VLA Model Integration (Transformer-based)
 - [ ] Graph World Model Design
@@ -31,3 +32,9 @@ This phase ensures the reproducibility of the Sim-to-Real environment on heterog
 
 ## 📖 Project Overview
 This project implements a **Neuro-Symbolic VLA (Vision-Language-Action)** model integrated with a **Graph-based World Model** for enhanced robot safety in industrial environments. It features a distributed architecture and real-time **Sim-to-Real** deployment capability using NVIDIA Isaac Sim
+
+## 📖 System Architecture & Engineering Standards
+This project follows **Tier-1 Research Engineering** practices to ensure scalability from Python prototyping to C++ deployment.
+**1. Hybrid Runtime Environment**
+* **Training/Sim:** PyTorch + NVIDIA Isaac Sim (Python) for rapid experimentation.
+* **Inference (Planned):** Custom C++ Runtime (TinyEngine-style) using Zero-Copy Memory Arenas and TensorRT for <2ms latency.

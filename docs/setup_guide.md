@@ -54,3 +54,32 @@ python check_gpu.py
 ```
 Expected Output:
 ✅ CUDA Available: True 🚀 GPU: NVIDIA GeForce RTX 4080 (or similar)
+
+## 5. Project Structure Initialization (Task 05)
+We establish a modular directory structure to separate simulation logic, model definition, and documentation. This ensures scalability as the codebase grows.
+
+### Standard Directory Layout
+Ensure your project root (`~/evlaformer`) follows this structure:
+
+```text
+evlaformer/
+├── configs/        # Configuration files (YAML/JSON)
+├── docs/           # Documentation (Setup guides, API docs)
+├── src/            # Source code
+│   ├── sim/        # Isaac Sim integration scripts
+│   ├── vla/        # VLA Model architecture
+│   └── utils/      # Helper functions
+├── tests/          # Unit tests
+├── .gitignore      # Git ignore rules
+└── README.md       # Project overview
+```
+
+## 6. C++ Compilation Chain Setup (Task 06)
+
+### Verify C++ Compilation Chain (Preparation for Phase 5)
+Ensure GCC and CMake are available for future Custom Inference Engine development.
+```bash
+gcc --version   # Expected: gcc (Ubuntu 9.4.0+)
+cmake --version # Expected: cmake version 3.x+
+nvcc --version  # Expected: Cuda compilation tools
+```
